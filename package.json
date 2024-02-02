@@ -1,0 +1,25 @@
+{
+  "name": "cloudflare-worker-jwt-esm-reproduction",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "bundle:rollup": "rollup --config rollup.config.js",
+    "bundle:esbuild": "esbuild index.js --bundle --outfile=bundle.esbuild.js",
+    "build": "wrangler build",
+    "deploy": "wrangler deploy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240129.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@tsndr/cloudflare-worker-jwt": "^2.4.5",
+    "esbuild": "0.20.0",
+    "rollup": "^4.9.6",
+    "wrangler": "^3.26.0"
+  }
+}
